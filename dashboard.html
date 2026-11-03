@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northstar Bank | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dashboard-body">
+    <div class="dashboard-shell container">
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-mark small">N</div>
+          <div>
+            <p class="mini-label">Northstar</p>
+            <strong>Banking</strong>
+          </div>
+        </div>
+
+        <nav class="side-nav" aria-label="Dashboard navigation">
+          <a href="#" class="active">Overview</a>
+          <a href="#">Accounts</a>
+          <a href="#">Transfers</a>
+          <a href="#">Payments</a>
+          <a href="#">Cards</a>
+          <a href="#">Security</a>
+        </nav>
+
+        <button class="ghost-btn" type="button">Log out</button>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div>
+            <p class="mini-label">Welcome back</p>
+            <h2>Alicia Nguyen</h2>
+          </div>
+          <div class="header-actions">
+            <button class="ghost-btn" type="button">Quick pay</button>
+            <button class="primary-btn small" type="button">Transfer</button>
+          </div>
+        </header>
+
+        <section class="account-summary">
+          <div class="summary-card hero-card">
+            <div>
+              <p class="mini-label alt">Available balance</p>
+              <h3>$48,246.82</h3>
+            </div>
+            <div class="chip">Primary</div>
+          </div>
+
+          <div class="summary-card mini-card">
+            <p class="mini-label alt">Income</p>
+            <strong>$6,200</strong>
+            <span>+8.4% this month</span>
+          </div>
+
+          <div class="summary-card mini-card">
+            <p class="mini-label alt">Expenses</p>
+            <strong>$2,940</strong>
+            <span>-2.1% this month</span>
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel large-panel">
+            <div class="panel-header">
+              <h4>Spending overview</h4>
+              <a href="#" class="text-link">View details</a>
+            </div>
+            <div class="chart-bars" aria-label="Spending chart">
+              <span style="height: 34%"></span>
+              <span style="height: 55%"></span>
+              <span style="height: 45%"></span>
+              <span style="height: 72%"></span>
+              <span style="height: 48%"></span>
+              <span style="height: 68%"></span>
+              <span style="height: 92%"></span>
+            </div>
+            <div class="chart-labels">
+              <span>Jan</span>
+              <span>Feb</span>
+              <span>Mar</span>
+              <span>Apr</span>
+              <span>May</span>
+              <span>Jun</span>
+              <span>Jul</span>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <h4>Recent activity</h4>
+              <a href="#" class="text-link">All</a>
+            </div>
+            <ul class="activity-list">
+              <li>
+                <div>
+                  <strong>Payroll deposit</strong>
+                  <span>Today, 9:14 AM</span>
+                </div>
+                <em>+$2,500</em>
+              </li>
+              <li>
+                <div>
+                  <strong>Market Street</strong>
+                  <span>Yesterday</span>
+                </div>
+                <em>-$48.20</em>
+              </li>
+              <li>
+                <div>
+                  <strong>Transfer to savings</strong>
+                  <span>Mon, 8:22 PM</span>
+                </div>
+                <em>-$750</em>
+              </li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

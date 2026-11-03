@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northstar Bank | Create Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="top-nav container">
+      <div class="brand-group">
+        <div class="brand-mark">N</div>
+        <div>
+          <p class="mini-label">Fictional digital banking</p>
+          <h1>Northstar Bank</h1>
+        </div>
+      </div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Sign in</a>
+        <a href="#">Personal</a>
+        <a href="#">Business</a>
+      </nav>
+    </header>
+
+    <main class="auth-shell container signup-shell">
+      <section class="auth-card wide-card" aria-labelledby="signup-heading">
+        <div class="card-topline">
+          <p class="mini-label alt">Open an account</p>
+          <a href="index.html" class="text-link">Back to sign in</a>
+        </div>
+
+        <h3 id="signup-heading">Create your member profile</h3>
+
+        <form id="signupForm" novalidate class="signup-form">
+          <div class="field-row two-up">
+            <label class="field">
+              <span>First name</span>
+              <input type="text" placeholder="First name" />
+            </label>
+            <label class="field">
+              <span>Last name</span>
+              <input type="text" placeholder="Last name" />
+            </label>
+          </div>
+
+          <div class="field-row two-up">
+            <label class="field">
+              <span>Email</span>
+              <input type="email" placeholder="name@example.com" />
+            </label>
+            <label class="field">
+              <span>Phone</span>
+              <input type="tel" placeholder="(555) 123-4567" />
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Create password</span>
+            <input type="password" placeholder="Choose a demo password" />
+          </label>
+
+          <label class="field">
+            <span>Account type</span>
+            <select>
+              <option>Checking</option>
+              <option>Savings</option>
+              <option>Business</option>
+            </select>
+          </label>
+
+          <label class="checkbox-inline">
+            <input type="checkbox" />
+            <span>I agree to the fictional demo terms and understand this is not a real banking flow.</span>
+          </label>
+
+          <button type="submit" class="primary-btn">Create demo account</button>
+        </form>
+
+        <p id="signupStatus" class="status-message" aria-live="polite">
+          Demo mode only: no account data is collected or stored.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

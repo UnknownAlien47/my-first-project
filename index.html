@@ -3,76 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Northstar Bank Demo</title>
+    <title>Northstar Bank | Secure Sign In</title>
+    <meta
+      name="description"
+      content="Northstar Bank demo login experience with a premium digital banking aesthetic."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="page-shell">
-      <header class="topbar">
-        <div class="brand-wrap">
-          <div class="brand-mark">N</div>
-          <div>
-            <p class="eyebrow">Fictional Digital Banking</p>
-            <h1>Northstar Bank</h1>
+  <body class="auth-body">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="top-nav container">
+      <div class="brand-group">
+        <div class="brand-mark">N</div>
+        <div>
+          <p class="mini-label">Fictional digital banking</p>
+          <h1>Northstar Bank</h1>
+        </div>
+      </div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#">Personal</a>
+        <a href="#">Business</a>
+        <a href="#">Wealth</a>
+      </nav>
+    </header>
+
+    <main class="auth-shell container">
+      <section class="hero-copy">
+        <p class="eyebrow">Secure access</p>
+        <h2>Banking built for your next move.</h2>
+        <p class="lede">
+          A polished, fictional banking mockup designed to feel premium, modern, and trusted.
+          This demo is for UI exploration only and does not process real credentials.
+        </p>
+
+        <div class="hero-metrics" aria-label="Banking features">
+          <div class="metric-box">
+            <strong>24/7</strong>
+            <span>Member access</span>
+          </div>
+          <div class="metric-box">
+            <strong>99.98%</strong>
+            <span>Uptime</span>
+          </div>
+          <div class="metric-box">
+            <strong>$4.8B</strong>
+            <span>Protected assets</span>
           </div>
         </div>
-        <button class="ghost-button" type="button">Need help?</button>
-      </header>
 
-      <main class="card-grid">
-        <section class="hero-panel">
-          <p class="label">Secure access</p>
-          <h2>Welcome back.</h2>
-          <p class="hero-copy">
-            This is a demo mockup for a banking-style login experience. No credentials are stored or sent.
-          </p>
+        <ul class="benefits-list">
+          <li>Real-time alerts</li>
+          <li>Fraud monitoring</li>
+          <li>Digital tools that simplify banking</li>
+        </ul>
+      </section>
 
-          <ul class="feature-list">
-            <li>24/7 account access</li>
-            <li>Built-in fraud monitoring</li>
-            <li>Fast bill payments</li>
-          </ul>
-        </section>
+      <section class="auth-card" aria-labelledby="login-heading">
+        <div class="card-topline">
+          <p class="mini-label alt">Member sign in</p>
+          <a href="signup.html" class="text-link">Create account</a>
+        </div>
 
-        <section class="login-panel" aria-labelledby="login-title">
-          <div class="panel-header">
-            <p class="label alt">Member login</p>
-            <h3 id="login-title">Sign in</h3>
+        <h3 id="login-heading">Welcome back</h3>
+
+        <form id="loginForm" novalidate>
+          <label class="field">
+            <span>Member ID</span>
+            <input
+              id="memberId"
+              name="memberId"
+              type="text"
+              placeholder="Enter your demo ID"
+              autocomplete="off"
+            />
+          </label>
+
+          <label class="field">
+            <span>Password</span>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Enter your demo password"
+              autocomplete="off"
+            />
+          </label>
+
+          <div class="form-row">
+            <label class="remember-me">
+              <input type="checkbox" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="text-link muted">Forgot ID or password?</a>
           </div>
 
-          <form id="loginForm" novalidate>
-            <label class="field">
-              <span>Member ID</span>
-              <input id="memberId" name="memberId" type="text" placeholder="Enter your demo ID" autocomplete="off" />
-            </label>
+          <button type="submit" class="primary-btn">Secure sign in</button>
+        </form>
 
-            <label class="field">
-              <span>Password</span>
-              <input id="password" name="password" type="password" placeholder="Enter your demo password" autocomplete="off" />
-            </label>
-
-            <div class="helper-row">
-              <label class="remember-me">
-                <input type="checkbox" />
-                <span>Remember me</span>
-              </label>
-              <a href="#" aria-label="Recover account access">Forgot ID or password?</a>
-            </div>
-
-            <button class="primary-button" type="submit">Secure sign in</button>
-            <button class="secondary-button" type="button">Create account</button>
-          </form>
-
-          <p id="statusMessage" class="status" aria-live="polite">
-            Demo mode only: form actions are simulated locally.
-          </p>
-        </section>
-      </main>
-    </div>
+        <p id="statusMessage" class="status-message" aria-live="polite">
+          Demo mode only: no credentials are saved or transmitted.
+        </p>
+      </section>
+    </main>
 
     <script src="script.js"></script>
   </body>
 </html>
+

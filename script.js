@@ -1,20 +1,53 @@
-const form = document.getElementById('loginForm');
+const loginForm = document.getElementById('loginForm');
+const signupForm = document.getElementById('signupForm');
 const statusMessage = document.getElementById('statusMessage');
+const signupStatus = document.getElementById('signupStatus');
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+if (loginForm) {
+  loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-  const memberId = document.getElementById('memberId').value.trim();
-  const password = document.getElementById('password').value.trim();
+    const memberId = document.getElementById('memberId')?.value.trim();
+    const password = document.getElementById('password')?.value.trim();
 
-  if (!memberId || !password) {
-    statusMessage.textContent = 'Please fill in the demo fields before continuing.';
-    statusMessage.style.color = '#f7d59c';
-    return;
-  }
+    if (!memberId || !password) {
+      statusMessage.textContent = 'Please complete the demo fields before continuing.';
+      statusMessage.style.color = '#f6d89d';
+      return;
+    }
 
-  statusMessage.textContent = 'Demo mode only: credentials are not stored or transmitted. This is a local mockup.';
-  statusMessage.style.color = '#9ad7b0';
+    statusMessage.textContent = 'Demo login accepted. This mockup does not process or store real credentials.';
+    statusMessage.style.color = '#8bd4a3';
 
-  form.reset();
-});
+    window.location.href = 'dashboard.html';
+  });
+}
+
+if (signupForm) {
+  signupForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    if (signupStatus) {
+      signupStatus.textContent = 'Demo account created. This is a fictional UI only and does not capture real account data.';
+      signupStatus.style.color = '#8bd4a3';
+    }
+
+    signupForm.reset();
+  });
+}
+
+const primaryButton = document.querySelector('.primary-btn');
+if (primaryButton && !document.getElementById('loginForm')) {
+  primaryButton.addEventListener('click', () => {
+    if (window.location.pathname.endsWith('dashboard.html')) {
+      window.location.href = 'index.html';
+    }
+  });
+}
+
+const logoutBtn = document.querySelector('.ghost-btn');
+if (logoutBtn && window.location.pathname.endsWith('dashboard.html')) {
+  logoutBtn.addEventListener('click', () => {
+    window.location.href = 'index.html';
+  });
+}
