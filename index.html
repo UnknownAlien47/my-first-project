@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northstar Bank Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">N</div>
+          <div>
+            <p class="eyebrow">Fictional Digital Banking</p>
+            <h1>Northstar Bank</h1>
+          </div>
+        </div>
+        <button class="ghost-button" type="button">Need help?</button>
+      </header>
+
+      <main class="card-grid">
+        <section class="hero-panel">
+          <p class="label">Secure access</p>
+          <h2>Welcome back.</h2>
+          <p class="hero-copy">
+            This is a demo mockup for a banking-style login experience. No credentials are stored or sent.
+          </p>
+
+          <ul class="feature-list">
+            <li>24/7 account access</li>
+            <li>Built-in fraud monitoring</li>
+            <li>Fast bill payments</li>
+          </ul>
+        </section>
+
+        <section class="login-panel" aria-labelledby="login-title">
+          <div class="panel-header">
+            <p class="label alt">Member login</p>
+            <h3 id="login-title">Sign in</h3>
+          </div>
+
+          <form id="loginForm" novalidate>
+            <label class="field">
+              <span>Member ID</span>
+              <input id="memberId" name="memberId" type="text" placeholder="Enter your demo ID" autocomplete="off" />
+            </label>
+
+            <label class="field">
+              <span>Password</span>
+              <input id="password" name="password" type="password" placeholder="Enter your demo password" autocomplete="off" />
+            </label>
+
+            <div class="helper-row">
+              <label class="remember-me">
+                <input type="checkbox" />
+                <span>Remember me</span>
+              </label>
+              <a href="#" aria-label="Recover account access">Forgot ID or password?</a>
+            </div>
+
+            <button class="primary-button" type="submit">Secure sign in</button>
+            <button class="secondary-button" type="button">Create account</button>
+          </form>
+
+          <p id="statusMessage" class="status" aria-live="polite">
+            Demo mode only: form actions are simulated locally.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
